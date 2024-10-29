@@ -1,114 +1,74 @@
-Ultimate Image Downloader
+# Ultimate Image Downloader
 
-Ultimate Image Downloader is a powerful command-line tool that allows you to download high-quality images from popular search engines like Google, Bing, and Baidu. Whether you're looking for portraits or full-body images, this tool provides an interactive experience to customize your image search and download preferences.
-Table of Contents
+Ultimate Image Downloader is a Python-based tool designed to download images from popular search engines like Google, Bing, and Baidu. It offers options for downloading both portrait and full-body images based on user-provided keywords, and it allows users to select specific sites or download from all available sources.
 
-Features
+## Features
 
-    High-Quality Images: Downloads large images (minimum size of 500x500 pixels) for better quality.
-    Customizable Image Type: Choose between portrait (face) images or full-body images.
-    Multi-Site Support: Download images from Google, Bing, Baidu, or all simultaneously.
-    User-Friendly Interaction: The script interacts with you to get necessary inputs through the terminal.
-    Organized Storage: Images are saved in a directory named after your keyword, with subdirectories for each site.
-    Flexible Configuration: Adjust filters and settings easily within the script.
+- **Search from multiple sources:** Google, Bing, Baidu, or all three.
+- **Download high-quality images:** Fetches large-sized images.
+- **Image type filters:** Choose between portrait or full-body images.
+- **User-defined settings:** Specify the number of images and the site(s) to download from.
+- **Easy-to-use interface:** Simple prompts for user input.
 
-Demo
+## Requirements
 
-Note: The demo shows the script in action, downloading images based on user input.
-Installation
+Before you run the script, ensure you have the following dependencies installed:
 
-    Clone the Repository
+- Python 3.x
+- iCrawler
 
-    bash
+Install the dependencies using:
 
-git clone https://github.com/yourusername/ultimate-image-downloader.git
-cd ultimate-image-downloader
-
-Create a Virtual Environment (Optional but Recommended)
-
-bash
-
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-
-Install Dependencies
-
-bash
-
-pip install -r requirements.txt
-
-If requirements.txt is not present, install icrawler directly:
-
-bash
-
-    pip install icrawler
-
-Usage
-Running the Script
-
-Run the script using Python:
-
-bash
-
-python ultimate_image_downloader.py
-
-Sample Interaction
-
-    Enter the Name/Keyword
-
-    bash
-
-Enter the name/keyword: John Doe
-
-Enter the Number of Images to Download
-
-css
-
-Enter the number of images to download: 50
-
-Choose Image Type
-
-arduino
-
-Do you want 'portrait' or 'full body' images? portrait
-
-Select Site(s) to Download From
-
-mathematica
-
-    Which site(s) to download from? Options: google, bing, baidu, all
-    Enter your choice: all
-
-    Download Progress
-
-    The script will start downloading images and display progress messages for each selected site.
-
-Project Structure
-
-arduino
-
-ultimate-image-downloader/
-├── ultimate_image_downloader.py
-├── README.md
-├── LICENSE
-├── .gitignore
-└── images/
-    ├── John Doe_images/
-        ├── google/
-        ├── bing/
-        └── baidu/
-
-    ultimate_image_downloader.py: The main script to run.
-    images/: Directory where downloaded images are stored, organized by keyword and site.
-
-Requirements
-
-    Python 3.6 or higher
-
-    icrawler
-
-    Install via pip:
-
-    bash
-
+```bash
 pip install icrawler
+```
+
+## How to Use
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/xeeroxxx/ultimate-image-downloader.git
+   cd ultimate-image-downloader
+   ```
+
+2. Run the script:
+
+   ```bash
+   python ultimate-image-downloader.py
+   ```
+
+3. Follow the prompts:
+   - **Enter the name/keyword**: Provide the search term for the images you want to download.
+   - **Enter the number of images to download**: Specify the number of images.
+   - **Choose image type**: Select either 'portrait' or 'full body'.
+   - **Choose site(s)**: Select from Google, Bing, Baidu, or all.
+
+## Directory Structure
+
+The downloaded images will be saved in a directory named after the keyword provided, organized by the site:
+
+```
+keyword_images/
+    ├── google/
+    ├── bing/
+    └── baidu/
+```
+
+## Example
+
+```bash
+python ultimate-image-downloader.py
+```
+
+**Output:**
+```
+Enter the name/keyword: cats
+Enter the number of images to download: 10
+Do you want 'portrait' or 'full body' images? portrait
+Which site(s) to download from? Options: google, bing, baidu, all
+Enter your choice: all
+```
+
+The images will be downloaded and saved in a directory named `cats_images`, with subdirectories for Google, Bing, and Baidu.
+
